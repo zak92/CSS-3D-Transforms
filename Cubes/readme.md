@@ -29,8 +29,8 @@ You can make a variety of shapes using the code base used by the cube. Then it i
 
 
 # Sources:
-[3dtransforms](https://3dtransforms.desandro.com/cube)\n
-[CodePen](https://codepen.io/mrosati84/pen/AFcpl/?editors=0100)\n
-[CSS Tricks](https://css-tricks.com/creating-a-3d-cube-image-gallery/)\n
+[3dtransforms](https://3dtransforms.desandro.com/cube)/n
+[CodePen](https://codepen.io/mrosati84/pen/AFcpl/?editors=0100)/n
+[CSS Tricks](https://css-tricks.com/creating-a-3d-cube-image-gallery/)/n
 [Gradient Generator](http://www.brandgradients.com/black-gradient/)
 
