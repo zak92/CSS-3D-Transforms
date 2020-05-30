@@ -1,0 +1,173 @@
+/*
+@media only screen and (min-width: 1011px)
+    @media only screen and (min-width: 571px) and (max-width: 1010px)
+*/
+    
+
+/*position each of the 3D transforms using CSS Flexbox*/
+
+.grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*mobile-----------*/
+@media only screen and (max-width: 570px){
+    
+    .grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    body {
+        padding-left: 20%;
+        background: linear-gradient(TO RIGHT, #040404, #000000, #656565);
+        margin: 0;
+    }
+}
+
+/*tablet-----------*/
+@media only screen and (min-width: 571px) and (max-width: 1010px){
+    .grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    body {
+        padding-left: 20%;
+        background: linear-gradient(TO RIGHT, #040404, #000000, #656565);
+        margin: 0;
+    }
+}
+
+/*desktop-----------*/
+@media only screen and (min-width: 1011px){
+    body {
+        padding-top: 10%;
+        background: linear-gradient(TO RIGHT, #040404, #000000, #656565);
+        margin: 0;
+    }
+    
+    .grid {
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+.wrap {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    padding: 5em;
+}
+
+.cube {
+  
+    background: tranparent;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;   
+    animation: rotateCube 5s linear infinite;
+
+}
+
+.side {
+    border-radius: 10px;
+    /*stacks all sides of the cube on top of each other*/
+    position: absolute;
+    /*width and length of the cube*/
+    width: 200px;
+    height: 200px;
+}
+
+/*
+Displaying the shape with 3 dimensions by using rotate and/or translate for each side
+*/
+.front-face {
+    
+    transform: rotateX(60deg);
+    background: linear-gradient(-120deg, #021b79, #0575e6, #205e9b);
+}
+
+.back-face {
+    transform: rotateX(120deg);
+    background: linear-gradient(45deg, #7a1036, #ff7ebe, #5fd0e2);
+}
+
+.left-face {
+    transform: rotateX(180deg);
+    background: linear-gradient(45deg, #bb1900, #fd6f01, #ffb000);
+}
+.right-face {
+ 
+    background: linear-gradient(45deg, #2f1c53, #a46dff, #f6d1fd);
+    transform: rotateX(240deg) rotateY(0deg);
+
+}
+
+.top-face {
+
+    transform: rotateX(300deg);
+    background: linear-gradient(TO RIGHT, #074c00, #42a341, #b8e2a3);
+}
+
+.bottom-face {
+    transform: rotateX(360deg);
+    background: linear-gradient(120deg, #0a2239, #01b287, #ff9f1c, #e5505a, #854c9e);
+}
+
+/*rotate the 3D transforms*/
+@keyframes rotateCube {
+    0% { transform: rotateX(180deg) rotateY(900deg) rotateZ(100deg);}
+    25% { transform: rotateX(360deg) rotateY(720deg)rotateZ(100deg);}
+    50% { transform: rotateX(540deg) rotateY(540deg) rotateZ(100deg);}
+    75% { transform: rotateX(720deg) rotateY(360deg) rotateZ(100deg);}
+    100% { transform: rotateX(900deg) rotateY(180deg) rotateZ(100deg);}
+}
+
+.side-2 {
+    border-radius: 100px;
+    /*stacks all sides on top of each other*/
+    position: absolute;
+    /*width and length of the cube*/
+    width: 200px;
+    height: 200px;
+}
+
+.front-face-2 {
+    transform: translate3d(0,0, 10px);
+    background: linear-gradient(-120deg, #021b79, #0575e6, #205e9b);
+}
+
+.back-face-2 {
+    transform: rotateY(180deg)translate3d(0,0,10px);
+    background: linear-gradient(45deg, #7a1036, #ff7ebe, #5fd0e2);
+}
+
+.left-face-2 {
+     transform: rotateY(-90deg) translate3d(0,0,10px);
+     background: linear-gradient(45deg, #bb1900, #fd6f01, #ffb000);
+    
+}
+
+.right-face-2 {
+    background: linear-gradient(45deg, #2f1c53, #a46dff, #f6d1fd);
+    transform: rotateY(90deg) translate3d(0,0,10px);
+}
+
+.top-face-2 {
+    transform: rotateX(90deg) translate3d(0,0,10px);
+    background: linear-gradient(TO RIGHT, #074c00, #42a341, #b8e2a3);
+   
+}
+
+.bottom-face-2 {
+    transform: rotateX(-90deg) translate3d(0,0,10px);
+    background: linear-gradient(120deg, #0a2239, #01b287, #ff9f1c, #e5505a, #854c9e);
+}
+
+
+
